@@ -1,0 +1,3 @@
+telegram_homepage:
+    path:     /telegramBot
+    defaults: { _controller: TelegramBundle:Default:index }
