@@ -2,10 +2,6 @@ telegram_homepage:
     path:     /telegramBot
     defaults: { _controller: TelegramBundle:Default:index }
 
-index:
-    path: /
-    defaults: {_controller: TelegramBundle:Default:index}
-
 bot_try:
     path: /tryBot
     defaults: {_controller: TelegramBundle:Bot:tryBot }
