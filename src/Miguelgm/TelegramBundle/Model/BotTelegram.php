@@ -122,7 +122,7 @@ class BotTelegram extends Telegram
         $which[] = 'User';
 
         foreach ($which as $auth) {
-            //$command_namespace = __NAMESPACE__ . '\\Commands\\' . $auth . 'Commands\\' . $this->ucfirstUnicode($command) . 'Command';
+            //$command_namespace = __NAMESPACE__ . '\\Command\\' . $auth . 'Command\\' . $this->ucfirstUnicode($command) . 'Command';
             $command_namespace = "Miguelgm\\TelegramBundle\\BotCommands\\" . $this->ucfirstUnicode($command) . "Command";
             if (class_exists($command_namespace)) {
                 return new $command_namespace($this, $this->update, $this->container);

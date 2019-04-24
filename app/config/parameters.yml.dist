@@ -19,6 +19,6 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
     telegram_api_key: '659498474:AAGQ2b0IQQj-kMJf3qxXM1SeQlGSUkETH8s'
     telegram_bot_name: miangameBot
-    url_server: 'http://miguelgm.es'
+    url_server: 'https://miguelgm.es'
     open_weather_api: 1ee6d5b605e1678f54b5e24aa2f32acc
     cr_api: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjM2OCwiaWRlbiI6IjIxMzQxNTQwNzA3ODQ3MzcyOCIsIm1kIjp7fSwidHMiOjE1NTA2MTYzOTc4ODR9.ddeAFWJfJ3ubwIWGOBRk1EyW6QMoaLcZTTMvzZW_poA

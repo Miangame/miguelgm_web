@@ -29,7 +29,7 @@ class HelpCommand extends UserCommand
         $command = trim($message->getText(true));
         $nickTelegram = $message->getFrom()->getUsername();
 
-        // Get Commands
+        // Get Command
         $commands = array();
         $allCommands = $this->telegram->getCommandsList();
 
