@@ -63,3 +63,4 @@
 # End of https://www.gitignore.io/api/symfony
 
 /.idea/*
+/cache/*
