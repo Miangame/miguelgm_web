@@ -9,12 +9,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
 
+    /**
+     * Muestra el portfolio
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function indexAction(Request $request)
     {
-        die("Página en construcción");
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('@App/portfolio.html.twig');
     }
 }

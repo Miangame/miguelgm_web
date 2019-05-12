@@ -1,0 +1,35 @@
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle d-flex align-content-center align-items-center" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {% for locale in locales %}
+            {% if locale.locale == "en" %}
+                {% set language = "gb" %}
+            {% else %}
+                {% set language = locale.locale %}
+            {% endif %}
+
+            {% if current_locale == locale.locale %}
+                <i class="flag flag-{{ language }}"></i>
+                {#{{ locale.locale_current_language|capitalize }}#}
+            {% endif %}
+        {% endfor %}
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-switcher" aria-labelledby="dropdownMenu1">
+        {% for locale in locales %}
+            {% if locale.locale == "en" %}
+                {% set language = "gb" %}
+            {% else %}
+                {% set language = locale.locale %}
+            {% endif %}
+
+            {% if current_locale != locale.locale %}
+                <li>
+                    <a href="{{ locale.link }}" class="dropdown-item d-flex align-content-center align-items-center">
+                        <i class="flag flag-{{ language }}"></i>
+                        {#{{ locale.locale_current_language|capitalize }} ({{ locale.locale_target_language|capitalize }})#}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

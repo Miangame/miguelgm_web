@@ -5,5 +5,5 @@ app:
     resource: '@AppBundle/Controller/'
 
 homepage:
-    path: /
-    defaults: {_controller: AppBundle:Default:index}
+    path: /{_locale}
+    defaults: {_controller: AppBundle:Default:index, _locale: "es"}

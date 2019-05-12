@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d2e4a4e3428cc3fbcb4e3146a5e7fef",
+    "content-hash": "d5fe881bf63751637d8e92419095f4e8",
     "packages": [
         {
             "name": "cmfcmf/openweathermap-php-api",
@@ -1540,6 +1540,76 @@
                 "telegram"
             ],
             "time": "2019-04-15T00:19:31+00:00"
+        },
+        {
+            "name": "lunetics/locale-bundle",
+            "version": "2.6.4",
+            "target-dir": "Lunetics/LocaleBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lunetics/LocaleBundle.git",
+                "reference": "ee0aad152179d63136b6aa7d3857887cce57974a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lunetics/LocaleBundle/zipball/ee0aad152179d63136b6aa7d3857887cce57974a",
+                "reference": "ee0aad152179d63136b6aa7d3857887cce57974a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "psr/log": "~1.0",
+                "symfony/framework-bundle": "^2.8 || ^3.0 || ^4.0",
+                "symfony/intl": "^2.8 || ^3.0 || ^4.0",
+                "symfony/templating": "^2.8 || ^3.0 || ^4.0",
+                "symfony/validator": "^2.8 || ^3.0 || ^4.0",
+                "symfony/yaml": "^2.8 || ^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "symfony/form": "^2.8 || ^3.0 || ^4.0",
+                "symfony/phpunit-bridge": "^3.3 || ^4.0",
+                "twig/twig": "1.* || 2.*"
+            },
+            "suggest": {
+                "ext-intl": "Needed for displaying the country name in the locale language"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Lunetics\\LocaleBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lunetics",
+                    "homepage": "http://www.lunetics.com"
+                },
+                {
+                    "name": "Christophe Willesmen",
+                    "homepage": "http://christophewillemsen.com"
+                }
+            ],
+            "description": "A Bundle for switching Languages",
+            "keywords": [
+                "browser",
+                "bundle",
+                "cookie",
+                "language",
+                "locale",
+                "multilanguage",
+                "router"
+            ],
+            "time": "2019-01-05T17:12:19+00:00"
         },
         {
             "name": "monolog/monolog",

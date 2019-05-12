@@ -1,0 +1,368 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'portfolio' %}
+
+{% block title %}
+    {{ ("portfolio.title")|trans }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div id="intro">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="https://miguelgm.es/">
+                    <img class="logo" src="{{ asset('assets/img/logoPrimary.png') }}" alt="">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a id="btnHome" class="nav-link mr-3 text-center"
+                               href="#">{{ ("portfolio.navbar.home")|trans }}</a>
+                        </li>
+                        <li class="nav-item mr-3 d-flex justify-content-center">
+                            <a class="nav-link btn contact" href="#">{{ ("portfolio.navbar.contact")|trans }}</a>
+                        </li>
+                        <li class="nav-item d-flex justify-content-center">
+                            {{ locale_switcher(null, null, '@App/includes/switcher_template.html.twig') }}
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row mt-5 pt-4">
+                <h1 id="headerTitle" class="text-center "
+                    style="width: 100%;">{{ ("portfolio.header.title")|trans }}</h1>
+
+                <p class="text-center text-muted mt-3"
+                   style="width: 100%;">{{ ("portfolio.header.description")|trans }}</p>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <img id="imgPhoto" class="mt-0 mt-md-4" src="{{ asset('assets/img/myPhoto.png') }}" alt="">
+            </div>
+
+            <div class="mt-0 mt-md-4 row d-flex justify-content-center">
+                <img id="imgTechnology" class="mt-4" src="{{ asset('assets/img/technology.png') }}" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <section id="aboutMe" class="text-center font-weight-bold text-white bg-portfolio is-long section">
+        <div class="container d-flex justify-content-center align-items-center align-content-center">
+            <div id="containerAboutme">
+                <p id="hi">
+                    {{ ("portfolio.aboutme.hi")|trans|raw }}
+                </p>
+
+                <p class="font-weight-light">
+                    {{ ("portfolio.aboutme.description")|trans }}
+                </p>
+                <p class="font-weight-light mt-4">
+                    {{ ("portfolio.aboutme.otherhand")|trans|raw }}
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 leftDiv">
+                    <img src="{{ asset('assets/img/fullstack.svg') }}" alt="">
+                    <p class="mt-5 display-2 font-weight-bold titleSkills">{{ ("portfolio.skills.title1")|trans }}</p>
+                    <p class="mt-3 font-weight-light">{{ ("portfolio.skills.description1")|trans }}</p>
+                    <p class="mt-4 colorPrimary subtitleSkills font-weight-bold">{{ ("portfolio.skills.subtitle1")|trans }}</p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.webtechnology")|trans }}:
+                    </p>
+                    <p>
+                        HTML5, CSS3, Sass, Twig, XML, XHTML, JavaScript, JQuery, PHP, AJAX.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.programming")|trans }}:
+                    </p>
+                    <p>
+                        C, C++, Java, Python, CLIPS, Bash.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.database")|trans }}:
+                    </p>
+                    <p>
+                        MySql, Oracle Database, PL/Sql.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        Frameworks:
+                    </p>
+                    <p>
+                        Symfony, Bootstrap, Materialize.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        IDE:
+                    </p>
+                    <p>
+                        Eclipse, PHPStorm, VSCode.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.operatingsystem")|trans }}:
+                    </p>
+                    <p>
+                        Linux, Windows, OSX.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.servers")|trans }}:
+                    </p>
+                    <p>
+                        {{ ("portfolio.skills.serversdescription")|trans }}
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.controlversion")|trans }}:
+                    </p>
+                    <p>
+                        GIT, GitFlow.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.office")|trans }}:
+                    </p>
+                    <p>
+                        Microsoft Office, LibreOffice.
+                    </p>
+                    <p class="mt-3 colorPrimary mb-0">
+                        {{ ("portfolio.skills.others")|trans }}:
+                    </p>
+                    <p>
+                        {{ ("portfolio.skills.othersdescription")|trans }}
+                    </p>
+
+                    <p class="mt-5">
+                        <a class="btn btn-primary" href="{{ asset('assets/pdf/CV Miguel Ángel Gavilán Merino.pdf') }}"
+                           download="CV Miguel Ángel Gavilán Merino">{{ ("portfolio.skills.downloadcv")|trans }}</a>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img id="imgTkd" src="{{ asset('assets/img/taekwondo.png') }}" alt="">
+                    <p class="font-weight-bold titleSkills">{{ ("portfolio.skills.title2")|trans }}</p>
+                    <p class="mt-3 font-weight-light">{{ ("portfolio.skills.description2")|trans|raw }}</p>
+                    <p class="mt-4 colorPrimary subtitleSkills font-weight-bold">{{ ("portfolio.skills.subtitle2")|trans }}</p>
+
+                    <div id="timelineContent">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInLeft">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.secondclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2002</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>III Trofeo Villafranca</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInRight">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.firstclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2002</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Trofeo Villafranca</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInLeft">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.firstclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2005</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>V Trofeo "Los Remedios"</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInRight">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.firstclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2005</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>VIII Pentathlon Taekwondo "Villa de Marmolejo"</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInLeft">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.firstclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2006</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>IV Trofeo Taekwondo "Villa de Marmolejo"</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInRight">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.secondclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2007</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>VII Trofeo "Los Remedios"</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInLeft">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.firstclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2007</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>X Pentathlon Taekwondo Córdoba</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInRight">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.thirdclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2007</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>XII Pentathlon Taekwondo Córdoba"</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInLeft">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">{{ ("portfolio.skills.secondclassified")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2011</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            <a href="http://altoguadalquiviralminuto.blogspot.com/2011/10/villafranca-acoge-la-copa-federacion-de.html"
+                                               target="_blank">Copa Federación Taekwondo</a> (Sector Córdoba-Jaen)</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInRight">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title font-weight-bold">{{ ("portfolio.skills.blackbelt")|trans }}</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2012</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"><i class="fa fa-clock"></i></div>
+                                <div class="timeline-panel animated slideInLeft">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title">Finalista</h4>
+                                        <p>
+                                            <small class="text-muted"><i class="far fa-calendar-alt"></i> 2013</small>
+                                        </p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            <a href="https://www.diariocordoba.com/noticias/altoguadalquivir/fase-final-supercopa-taekwondo-antequera_775780.html"
+                                               target="_blank">Copa Taekwondo Antequera</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-portfolio text-center text-white pb-5">
+        <img class="logo mb-5" src="{{ asset('assets/img/logoWhite.png') }}" alt="">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <p class="font-italic font-weight-light" id="cita">
+                    <i class="fa fa-quote-left"></i> {{ ("portfolio.footer.cita")|trans }} <i
+                            class="fa fa-quote-right"></i>
+                    <br>
+                    Steve Jobs
+                </p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="icons">
+                <p>
+                    {{ ("portfolio.footer.findme")|trans }}:
+                </p>
+                <a href="https://twitter.com/miguel5gavilan" class="m-2" target="_blank">
+                    <i id="twitter" class="fab fa-twitter-square fa-3x"></i>
+                </a>
+                <a href="https://www.facebook.com/miguel.gavilanmerino" class=" m-2" target="_blank">
+                    <i id="facebook" class="fab fa-facebook-square fa-3x"></i>
+                </a>
+                <a href="https://github.com/Miangame" class="m-2" target="_blank">
+                    <i id="github" class="fab fa-github-square fa-3x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-gavil%C3%A1n-merino-111438138/"
+                   class="m-2"
+                   target="_blank">
+                    <i id="linkedin" class="fab fa-linkedin fa-3x"></i>
+                </a>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

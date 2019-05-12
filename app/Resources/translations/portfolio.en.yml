@@ -1,0 +1,40 @@
+portfolio:
+  title: "Portfolio from Miguel Ángel Gavilán Merino"
+  navbar:
+    home: "Home"
+    contact: "Contact"
+  dropdown:
+    spanish: "Spanish"
+    english: "English"
+  header:
+    title: "Programmer & Full-Stack Developer"
+    description: "Enthusiast of technology in general and of programming in particular."
+  aboutme:
+    hi: "Hi, I'm Miguel Ángel.</br> Know a little more about me."
+    description: "I am a hard worker, charismatic and a little perfectionist. I never think that something is good enough. I love feeling fulfilled so I never stop researching about technology."
+    otherhand: "On the other hand, I love sports. I have tried many, but the one that caught me was <span class='font-weight-bold'>TAEKWONDO</span>, so much that I practiced it for almost 20 years and I am a 1st DAN black belt."
+  skills:
+    title1: "Full-Stack Developer | Programmer"
+    title2: "Taekwondo"
+    description1: "I like to code things from scratch, and enjoy bringing ideas to life in the browser."
+    description2: "I have practiced this sport since I was 5 years old. Personally, he has instilled in me values such as discipline, self-control, perseverance, physical and mental strength... </br> In general, it has served me throughout my life to become the person I am."
+    subtitle1: "My knowledge:"
+    subtitle2: "Achievements:"
+    webtechnology: "Web technology"
+    programming: "Programming"
+    database: "Database"
+    operatingsystem: "Operating Systems"
+    servers: "Servers"
+    controlversion: "Version control"
+    office: "Office"
+    others: "Others"
+    downloadcv: "Download my updated C.V in PDF format"
+    serversdescription: "Centos, Ubuntu Server, Installation and configuration of Apache."
+    othersdescription: "Creation of telegram bots with Symfony."
+    firstclassified: "1st clasified"
+    secondclassified: "2nd clasified"
+    thirdclassified: "3rd clasified"
+    blackbelt: "Cinturón negro 1er DAN"
+  footer:
+    cita: "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do."
+    findme: "Find me at"

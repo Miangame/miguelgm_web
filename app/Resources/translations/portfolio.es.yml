@@ -1,0 +1,40 @@
+portfolio:
+  title: "Miguel Gavilán | Full-Stack Developer"
+  navbar:
+    home: "Inicio"
+    contact: "Contacto"
+  dropdown:
+    spanish: "Español"
+    english: "Inglés"
+  header:
+    title: "Programador & Full-Stack Developer"
+    description: "Entusiasta de la tecnología en general y de la programación en particular."
+  aboutme:
+    hi: "Hola, soy Miguel Ángel.</br> Conoce un poco más sobre mi."
+    description: "Soy una persona trabajadora, carismática y un poco perfeccionista. Nunca pienso que algo está lo suficientemente bien. Me encanta sentirme realizado por lo que nunca paro de investigar sobre tecnología."
+    otherhand: "Por otro lado, me encanta el deporte. He probado muchos, pero el que me atrapó fue el <span class='font-weight-bold'>TAEKWONDO</span>, tanto que lo he practicado durante casi 20 años y soy cinturón negro 1er DAN."
+  skills:
+    title1: "Full-Stack Developer | Programador"
+    title2: "Taekwondo"
+    description1: "Me gusta codificar cosas desde cero, y disfruto dándole vida a las ideas en el navegador."
+    description2: "He practicado este deporte desde los 5 años. Personalmente, me ha inculcado valores como la disciplina, autocontrol, perseverancia, fuerza física y mental... </br>En general, me ha servido a lo largo de la vida para llegar a ser la persona que soy."
+    subtitle1: "Mis conocimientos:"
+    subtitle2: "Logros:"
+    webtechnology: "Tecnología web"
+    programming: "Programación"
+    database: "Base de datos"
+    operatingsystem: "Sistemas Operativos"
+    servers: "Servidores"
+    controlversion: "Control de versiones"
+    office: "Ofimática"
+    others: "Otros"
+    downloadcv: "Descárgate mi C.V actualizado en formato PDF"
+    serversdescription: "Centos, Ubuntu Server, Instalación y configuración de Apache."
+    othersdescription: "Creación de bots de telegram con Symfony."
+    firstclassified: "1er clasificado"
+    secondclassified: "2º clasificado"
+    thirdclassified: "3er clasificado"
+    blackbelt: "Cinturón negro 1er DAN"
+  footer:
+    cita: "El trabajo ocupará una gran parte de tu vida, la mejor forma de lidiar con ello, es encontrar algo que realmente ames."
+    findme: "Encuéntrame en"
