@@ -7,3 +7,13 @@ app:
 homepage:
     path: /{_locale}
     defaults: {_controller: AppBundle:Default:index, _locale: "es"}
+
+contact:
+    path: /{_locale}/contact
+    defaults: {_controller: AppBundle:Default:contact}
+    requirements:
+        _locale: es|en
+
+send_form_contact:
+    path: /{_locale}/send_form_contact
+    defaults: {_controller: AppBundle:Default:sendFormContact, _locale: "es"}

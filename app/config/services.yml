@@ -8,3 +8,7 @@ services:
         class: Miguelgm\TelegramBundle\Services\WeatherHelper
         arguments: ["%open_weather_api%"]
 
+    email_helper:
+        class: AppBundle\Services\EmailHelper
+        arguments: ["@mailer"]
+

@@ -1,0 +1,139 @@
+{% extends 'basePortfolio.html.twig' %}
+
+{% trans_default_domain 'portfolio' %}
+
+{% block bodyPortfolio %}
+    <div id="containerContact">
+        <div class="container d-flex justify-content-center align-content-center align-items-center">
+            <img id="imgPhotoContact" src="{{ asset('assets/img/myPhoto2.jpg') }}" alt="">
+
+            <p id="contactTitle" class="text-center">{{ ("portfolio.contact.title")|trans }} ;)</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">{{ ("portfolio.contact.name")|trans }}</label>
+                        <input id="name" name="name" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">{{ ("Email")|trans }}</label>
+                        <input id="email" name="email" class="form-control" type="email" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="comments">{{ ("portfolio.contact.message")|trans }}</label>
+                        <textarea class="form-control" name="comments" id="comments" cols="49" rows="5" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" class="btn contact btnSubmit" value="{{ ('portfolio.contact.submit')|trans }}">
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        {
+            // Vacía los campos del formulario
+            let redoForm = function (event) {
+                // event.preventDefault();
+
+                $("input[type='text'], input[type='email'], textarea").val("");
+            };
+
+            let checkForm = function () {
+                let name = $("#name").val();
+                let email = $("#email").val();
+                let comments = $("#comments").val();
+
+                let error = false;
+
+                if (!name) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Por favor introduce un nombre.",
+                        type: "error"
+                    });
+                    error = true;
+                }
+                if (!email) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Por favor introduce un email.",
+                        type: "error"
+                    });
+                    error = true;
+                }
+                if (!comments) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Por favor escríbeme algo :)",
+                        type: "error"
+                    });
+                    error = true;
+                }
+
+                return error;
+            };
+
+            // Envía el formulario de contacto y antes lo comprueba
+            let submitForm = function (event) {
+                event.preventDefault();
+
+                let name = $("#name").val();
+                let email = $("#email").val();
+                let comments = $("#comments").val();
+
+                if (!checkForm()) {
+                    $.ajax({
+                        url: "{{ path('send_form_contact') }}",
+                        method: "POST",
+                        data: {
+                            name : name,
+                            email : email,
+                            comments : comments,
+                        },
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.status) {
+                                Swal.fire({
+                                    title: "Mensaje enviado correctamente",
+                                    type: "success"
+                                });
+                                redoForm();
+                            } else {
+                                Swal.fire({
+                                    title: "Ha ocurrido un error",
+                                    text: "Inténtelo de nuevo más tarde",
+                                    type: "error"
+                                });
+                            }
+
+                        },
+                        error: function (error) {
+                            Swal.fire({
+                                title: "Ha ocurrido un error",
+                                text: "Revise que los datos estén correctos",
+                                type: "error"
+                            });
+                        }
+                    });
+                }
+            };
+
+            $(function () {
+                $("#redoForm").on("click", redoForm);
+                $(".btnSubmit").on("click", submitForm);
+            });
+        }
+    </script>
+{% endblock %}

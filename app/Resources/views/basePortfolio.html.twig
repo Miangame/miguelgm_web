@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'portfolio' %}
+
+{% block title %}
+    {{ ("portfolio.title")|trans }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="intro">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="{{ path('homepage') }}">
+                    <img class="logo" src="{{ asset('assets/img/logoPrimary.png') }}" alt="">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        {% if app.request.get('_route') != "contact" %}
+                            <li class="nav-item active">
+                                <a id="btnHome" class="nav-link mr-3 text-center"
+                                   href="{{ path('homepage') }}">{{ ("portfolio.navbar.home")|trans }}</a>
+                            </li>
+                            <li class="nav-item mr-3 d-flex justify-content-center">
+                                <a class="nav-link btn contact"
+                                   href="{{ path('contact') }}">{{ ("portfolio.navbar.contact")|trans }}</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item active">
+                                <a id="redoForm" class="nav-link mr-3 text-center"
+                                   href="#" title="{{ ('portfolio.redo.title')|trans }}">
+                                    <i class="fa fa-redo colorPrimary"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item mr-3 d-flex justify-content-center">
+                                <a class="nav-link btn"
+                                   href="{{ path('homepage') }}" title="{{ ("portfolio.closeform.title")|trans }}">
+                                    <i class="fa fa-times colorPrimary"></i>
+                                </a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item d-flex justify-content-center">
+                            {{ locale_switcher(null, null, '@App/portfolio/includes/switcher_template.html.twig') }}
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {% block bodyPortfolio %}
+
+    {% endblock %}
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+

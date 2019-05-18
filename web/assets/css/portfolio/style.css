@@ -90,6 +90,19 @@
         width: 230px !important;
         height: 230px !important;
     }
+
+    #contactTitle {
+        font-size: 48px;
+    }
+
+    #imgPhotoContact {
+        width: 150px !important;
+        margin: -100px auto 50px !important;
+    }
+
+    .btnSubmit {
+        width: 15% !important;
+    }
 }
 
 .navbar {
@@ -222,6 +235,32 @@
 
 #icons svg:hover {
     transform: scale(1.2);
+}
+
+#containerContact {
+    margin-top: 20px;
+    border-top: 1px solid #E6ECF8;
+}
+
+#imgPhotoContact {
+    width: 80px;
+    margin: -60px auto 50px;
+    z-index: 10;
+    border-radius: 50%;
+    border: 1px solid #E6ECF8;
+}
+
+#contactTitle {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+#comments {
+    resize: none;
+}
+
+.btnSubmit {
+    width: 30% !important;
 }
 
 /*TIMELINE*/

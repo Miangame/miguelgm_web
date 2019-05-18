@@ -1,44 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'basePortfolio.html.twig' %}
 
 {% trans_default_domain 'portfolio' %}
 
-{% block title %}
-    {{ ("portfolio.title")|trans }}
-{% endblock %}
-
-{% block stylesheets %}
-    {{ parent() }}
-{% endblock %}
-
-{% block body %}
+{% block bodyPortfolio %}
     <div class="container">
         <div id="intro">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="https://miguelgm.es/">
-                    <img class="logo" src="{{ asset('assets/img/logoPrimary.png') }}" alt="">
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-bar top-bar"></span>
-                    <span class="icon-bar middle-bar"></span>
-                    <span class="icon-bar bottom-bar"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a id="btnHome" class="nav-link mr-3 text-center"
-                               href="#">{{ ("portfolio.navbar.home")|trans }}</a>
-                        </li>
-                        <li class="nav-item mr-3 d-flex justify-content-center">
-                            <a class="nav-link btn contact" href="#">{{ ("portfolio.navbar.contact")|trans }}</a>
-                        </li>
-                        <li class="nav-item d-flex justify-content-center">
-                            {{ locale_switcher(null, null, '@App/includes/switcher_template.html.twig') }}
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
             <div class="row mt-5 pt-4">
                 <h1 id="headerTitle" class="text-center "
                     style="width: 100%;">{{ ("portfolio.header.title")|trans }}</h1>
@@ -361,8 +327,4 @@
             <div class="col-md-4"></div>
         </div>
     </section>
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
 {% endblock %}

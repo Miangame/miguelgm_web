@@ -38,3 +38,12 @@ portfolio:
   footer:
     cita: "El trabajo ocupará una gran parte de tu vida, la mejor forma de lidiar con ello, es encontrar algo que realmente ames."
     findme: "Encuéntrame en"
+  redo:
+    title: "Reiniciar formulario"
+  closeform:
+    title: "Cerrar formulario"
+  contact:
+    title: "Escríbeme lo que quieras"
+    name: "Nombre"
+    message: "Mensaje"
+    submit: "Enviar"
