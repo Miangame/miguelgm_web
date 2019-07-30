@@ -87,8 +87,8 @@
         font-size: 20px !important;
     }
     #imgPhoto {
-        width: 230px !important;
-        height: 230px !important;
+        width: 150px !important;
+        margin: -100px auto 50px !important;
     }
 
     #contactTitle {
@@ -96,8 +96,8 @@
     }
 
     #imgPhotoContact {
-        width: 150px !important;
-        margin: -100px auto 50px !important;
+        width: 220px !important;
+        height: 270px !important;
     }
 
     .btnSubmit {
@@ -120,8 +120,11 @@
 }
 
 #imgPhoto {
-    width: 160px;
-    height: 160px;
+    width: 80px;
+    margin: -60px auto 50px;
+    z-index: 10;
+    border-radius: 50%;
+    /* border: 1px solid #E6ECF8; */
 }
 
 .contact:hover {
@@ -243,10 +246,11 @@
 }
 
 #imgPhotoContact {
-    width: 80px;
-    margin: -60px auto 50px;
-    z-index: 10;
-    border-radius: 50%;
+    width: 140px;
+    height: 180px;
+    /* margin: -70px auto 50px; */
+    /* z-index: 10; */
+    border-radius: 10%;
     border: 1px solid #E6ECF8;
 }
 
