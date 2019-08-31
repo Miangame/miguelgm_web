@@ -28,6 +28,7 @@ portfolio:
     controlversion: "Control de versiones"
     office: "Ofimática"
     others: "Otros"
+    trybot: "¡Prueba mi bot de telegram!"
     downloadcv: "Descárgate mi C.V actualizado en formato PDF"
     serversdescription: "Centos, Ubuntu Server, Instalación y configuración de Apache."
     othersdescription: "Creación de bots de telegram con Symfony."
@@ -47,3 +48,8 @@ portfolio:
     name: "Nombre"
     message: "Mensaje"
     submit: "Enviar"
+  modalTryBot:
+    title: "Mi bot de telegram"
+    text: "He creado un bot de telegram con chorradas varias, ¿Quieres probarlo?"
+    confirmbutton: "Si, llevame a verlo!"
+    cancelbutton: "Nah, dejalo!"

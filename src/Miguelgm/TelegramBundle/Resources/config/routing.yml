@@ -1,5 +1,5 @@
 telegram_homepage:
-    path:     /telegramBot
+    path: /telegramBot
     defaults: { _controller: TelegramBundle:Default:index }
 
 bot_try:

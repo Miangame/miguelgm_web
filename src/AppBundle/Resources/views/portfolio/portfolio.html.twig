@@ -111,6 +111,9 @@
                     </p>
 
                     <p class="mt-5">
+                        <button id="btnTryBot" class="btn btn-primary">{{ ("portfolio.skills.trybot")|trans }}</button>
+                    </p>
+                    <p class="">
                         <a class="btn btn-primary" href="{{ asset('assets/pdf/CV Miguel Ángel Gavilán Merino.pdf') }}"
                            download="CV Miguel Ángel Gavilán Merino">{{ ("portfolio.skills.downloadcv")|trans }}</a>
                     </p>
@@ -327,4 +330,32 @@
             <div class="col-md-4"></div>
         </div>
     </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        {
+            $(function(){
+                $("#btnTryBot").on("click", function() {
+                    Swal.fire({
+                        title: "Mi bot de telegram",
+                        text: "He creado un bot de telegram con chorradas varias, ¿Quieres probarlo?",
+                        type: "info",
+                        showCancelButton: true,
+                        confirmButtonText: "Si, llevame a verlo!",
+                        cancelButtonText: "Nah, dejalo!",
+                        reverseButtons: true
+                    })
+                    .then((result) => {
+                        if (result.value) {
+                            let win = window.open("https://t.me/miangameBot", '_blank');
+                            win.focus();
+                        }
+                    });
+                })
+            })
+        }
+    </script>
 {% endblock %}
