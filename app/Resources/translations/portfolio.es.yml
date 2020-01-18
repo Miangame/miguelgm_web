@@ -7,12 +7,12 @@ portfolio:
     spanish: "Español"
     english: "Inglés"
   header:
-    title: "Programador & Full-Stack Developer"
+    title: "Programador & Web Developer"
     description: "Entusiasta de la tecnología en general y de la programación en particular."
   aboutme:
-    hi: "Hola, soy Miguel Ángel.</br> Conoce un poco más sobre mi."
+    hi: "¡Hola! Soy Miguel Ángel.</br> Conoce un poco más sobre mi."
     description: "Soy una persona trabajadora, carismática y un poco perfeccionista. Nunca pienso que algo está lo suficientemente bien. Me encanta sentirme realizado por lo que nunca paro de investigar sobre tecnología."
-    otherhand: "Por otro lado, me encanta el deporte. He probado muchos, pero el que me atrapó fue el <span class='font-weight-bold'>TAEKWONDO</span>, tanto que lo he practicado durante casi 20 años y soy cinturón negro 1er DAN."
+    otherhand: "Por otro lado, me encanta el deporte. He probado muchos, pero el que me atrapó fue el <span class='font-weight-bold'>TAEKWONDO</span>, tanto que lo he practicado durante casi 20 años consiguiendo el cinturón negro 1er DAN en el año 2012."
   skills:
     title1: "Full-Stack Developer | Programador"
     title2: "Taekwondo"
@@ -30,7 +30,7 @@ portfolio:
     others: "Otros"
     trybot: "¡Prueba mi bot de telegram!"
     downloadcv: "Descárgate mi C.V actualizado en formato PDF"
-    serversdescription: "Centos, Ubuntu Server, Instalación y configuración de Apache."
+    serversdescription: "Heroku, CI/CD, Centos, Ubuntu Server"
     othersdescription: "Creación de bots de telegram con Symfony."
     firstclassified: "1er clasificado"
     secondclassified: "2º clasificado"
